@@ -18,12 +18,6 @@ jobs:
         with:
           path: ~/.npm
           key: hashFiles('package-lock.json')
-
-     # - name: install dep
-     #   run: npm ci
-     #   with:
-     #     key: hashFiles('package-lock.json')
-      - name: npm test
+        run: npm ci
         run: npm test
-      - name: npm build
         run: npm run build
