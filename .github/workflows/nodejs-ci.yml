@@ -16,8 +16,7 @@ jobs:
       - name: npm cahce
         uses: actions/cache@~/.npm
         #path: ~/.npm
-        with:
-          hashFiles('package-lock.json')
+        key: hashFiles('package-lock.json')
 
       - name: install dep
         run: npm ci
