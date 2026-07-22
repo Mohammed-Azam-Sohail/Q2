@@ -17,7 +17,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.npm
-          key: hashFiles('package-lock.json')
+          key: key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - name: npm ops
         run: |
           npm install
