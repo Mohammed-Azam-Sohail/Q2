@@ -22,7 +22,6 @@ jobs:
       - name: install dep
         run: npm ci
         with:
-          path: ~/.npm
           key: hashFiles('package-lock.json')
       - name: npm test
         run: npm test
