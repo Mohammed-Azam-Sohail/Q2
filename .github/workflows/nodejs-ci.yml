@@ -1,0 +1,27 @@
+name: Node.js CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          - node-version: '20'
+      - name: npm cahce
+        uses: actions/cache@v4
+        path: ~/.npm
+        with:
+          - hashFiles('package-lock.json')
+
+      - name: install dep
+        run: npm ci
+      - name: npm test
+        run: npm test
+      - name: npm build
+        run: npm run build
