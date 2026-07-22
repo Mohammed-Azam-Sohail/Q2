@@ -20,7 +20,7 @@ jobs:
           key: hashFiles('package-lock.json')
 
       - name: install dep
-        run: npm ci
+        run: npm install
       - name: npm test
         run: npm test
       - name: npm build
