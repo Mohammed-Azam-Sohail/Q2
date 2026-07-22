@@ -18,8 +18,8 @@ jobs:
         with:
           path: ~/.npm
           key: hashFiles('package-lock.json')
-      - name: npm cahce
+      - name: npm ops
         run: |
-          npm clean-install
+          npm install
           npm test
           npm run build
