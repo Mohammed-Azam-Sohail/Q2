@@ -14,8 +14,8 @@ jobs:
         with:
           node-version: '20'
       - name: npm cahce
-        uses: actions/cache@v4
-        path: ~/.npm
+        uses: actions/cache@~/.npm
+        #path: ~/.npm
         with:
           - hashFiles('package-lock.json')
 
